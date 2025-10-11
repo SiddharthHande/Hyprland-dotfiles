@@ -1,0 +1,398 @@
+/* Main notification center window - Full height sidebar */
+.notification-center {
+    background: rgba(32, 32, 32, 0.95);
+    border: none;
+    border-left: 1px solid rgba(0, 120, 215, 0.3);
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* Floating notification window (popup) */
+.floating-notifications {
+    background: transparent;
+}
+
+.floating-notifications .notification {
+    background: rgba(32, 32, 32, 0.95);
+    border: 1px solid rgba(0, 120, 215, 0.3);
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.floating-notifications .notification:hover {
+    background: rgba(40, 40, 40, 0.95);
+    border: 1px solid rgba(0, 120, 215, 0.5);
+}
+
+/* Control center (notification panel) - Full height */
+.control-center {
+    background: rgba(32, 32, 32, 0.95);
+    border: none;
+    border-left: 1px solid rgba(0, 120, 215, 0.3);
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* Blank window (when no notifications) */
+.blank-window {
+    background: rgba(32, 32, 32, 0.95);
+}
+
+/* Header section */
+.widget-title {
+    background: rgba(32, 32, 32, 0.95);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 16px;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.widget-title>label {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Clear all button in header */
+.widget-title>button {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #e0e0e0;
+    font-size: 13px;
+    padding: 6px 16px;
+    border-radius: 2px;
+    margin-left: 8px;
+}
+
+.widget-title>button:hover {
+    background: rgba(0, 120, 215, 0.85);
+    color: #ffffff;
+    border: 1px solid rgba(0, 120, 215, 0.85);
+}
+
+/* Do Not Disturb section */
+.widget-dnd {
+    background: rgba(32, 32, 32, 0.95);
+    padding: 12px 16px;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.widget-dnd>label {
+    color: #e0e0e0;
+    font-size: 14px;
+}
+
+.widget-dnd>switch {
+    background: rgba(60, 60, 60, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    min-width: 48px;
+    min-height: 24px;
+}
+
+.widget-dnd>switch:checked {
+    background: rgba(0, 120, 215, 0.85);
+    border: 1px solid rgba(0, 120, 215, 0.85);
+}
+
+.widget-dnd>switch slider {
+    background: #ffffff;
+    border-radius: 10px;
+    margin: 2px;
+}
+
+/* Notifications container */
+.notification-row {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.notification-row:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Individual notification card */
+.notification {
+    background: rgba(32, 32, 32, 0.95);
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    margin: 0;
+    padding: 12px 16px;
+}
+
+.notification:hover {
+    background: rgba(45, 45, 45, 0.95);
+}
+
+/* Notification default action (clickable area) */
+.notification-default-action {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* Notification content area */
+.notification-content {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+}
+
+/* App icon */
+.notification-icon {
+    margin-right: 12px;
+    border-radius: 2px;
+}
+
+.notification-icon image {
+    border-radius: 2px;
+}
+
+/* App name header */
+.app-icon,
+.app-name {
+    margin: 0;
+}
+
+.notification-app-name {
+    color: #0078d7;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+/* Title/Summary */
+.summary {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+/* Body text */
+.body {
+    color: #e0e0e0;
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+
+/* Timestamp */
+.time {
+    color: #a0a0a0;
+    font-size: 11px;
+}
+
+/* Close button */
+.close-button {
+    background: transparent;
+    border: none;
+    color: #a0a0a0;
+    border-radius: 2px;
+    padding: 4px 6px;
+    margin: 0;
+    min-width: 24px;
+    min-height: 24px;
+}
+
+.close-button:hover {
+    background: rgba(232, 17, 35, 0.85);
+    color: #ffffff;
+}
+
+/* Action buttons in notifications */
+.notification-action {
+    background: rgba(45, 45, 45, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+    color: #e0e0e0;
+    padding: 8px 16px;
+    margin: 4px 4px 4px 0;
+    font-size: 13px;
+}
+
+.notification-action:hover {
+    background: rgba(0, 120, 215, 0.85);
+    color: #ffffff;
+    border: 1px solid rgba(0, 120, 215, 0.85);
+}
+
+.notification-action:first-child {
+    margin-left: 0;
+}
+
+/* Body images in notifications */
+.body-image {
+    margin: 8px 0;
+    border-radius: 2px;
+}
+
+/* Inline reply */
+.inline-reply {
+    margin-top: 8px;
+}
+
+.inline-reply-entry {
+    background: rgba(45, 45, 45, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+    color: #e0e0e0;
+    padding: 8px;
+}
+
+.inline-reply-entry:focus {
+    border: 1px solid rgba(0, 120, 215, 0.85);
+    outline: none;
+}
+
+.inline-reply-button {
+    background: rgba(0, 120, 215, 0.85);
+    border: none;
+    border-radius: 2px;
+    color: #ffffff;
+    padding: 8px 16px;
+    margin-left: 8px;
+}
+
+.inline-reply-button:hover {
+    background: rgba(0, 120, 215, 1);
+}
+
+/* Notification groups */
+.notification-group {
+    margin: 0;
+    padding: 0;
+}
+
+.notification-group-headers {
+    background: rgba(45, 45, 45, 0.9);
+    color: #0078d7;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 8px 16px;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.notification-group-icon {
+    margin-right: 8px;
+}
+
+.notification-group-collapse-button {
+    background: transparent;
+    border: none;
+    color: #a0a0a0;
+    padding: 4px;
+}
+
+.notification-group-collapse-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+/* Scrollbar styling */
+scrollbar {
+    background: transparent;
+    width: 8px;
+}
+
+scrollbar slider {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    min-height: 40px;
+}
+
+scrollbar slider:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+scrollbar trough {
+    background: transparent;
+}
+
+/* Urgency levels with left border accent */
+.low {
+    border-left: 3px solid rgba(0, 120, 215, 0.6);
+    padding-left: 13px;
+}
+
+.normal {
+    border-left: 3px solid rgba(0, 120, 215, 0.85);
+    padding-left: 13px;
+}
+
+.critical {
+    border-left: 3px solid rgba(232, 17, 35, 0.85);
+    padding-left: 13px;
+    background: rgba(232, 17, 35, 0.08);
+}
+
+.critical .notification-app-name {
+    color: rgba(232, 17, 35, 0.85);
+}
+
+/* Floating notification urgency styling */
+.floating-notifications .low {
+    border-left: 4px solid rgba(0, 120, 215, 0.6);
+}
+
+.floating-notifications .normal {
+    border-left: 4px solid rgba(0, 120, 215, 0.85);
+}
+
+.floating-notifications .critical {
+    border-left: 4px solid rgba(232, 17, 35, 0.85);
+    background: rgba(232, 17, 35, 0.15);
+    animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 4px 12px rgba(232, 17, 35, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 4px 20px rgba(232, 17, 35, 0.6);
+    }
+}
+
+/* Widget label */
+.widget-label {
+    color: #e0e0e0;
+    font-size: 14px;
+    margin: 16px;
+}
+
+/* MPRIS (media controls) widget */
+.widget-mpris {
+    background: rgba(45, 45, 45, 0.9);
+    margin: 8px;
+    padding: 12px;
+    border-radius: 2px;
+}
+
+.widget-mpris-player {
+    background: transparent;
+}
+
+.widget-mpris-title {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.widget-mpris-subtitle {
+    color: #a0a0a0;
+    font-size: 12px;
+}

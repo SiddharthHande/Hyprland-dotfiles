@@ -1,0 +1,127 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "height": 40,
+  "modules-left": [
+    "custom/start",
+    "wlr/taskbar"
+  ],
+  "modules-center": [],
+  "modules-right": [
+    "custom/media",
+    "tray",
+    "pulseaudio",
+    "backlight",
+    "battery",
+    "network",
+    "clock",
+    "custom/notification"
+  ],
+  "custom/start": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "wofi --show drun"
+  },
+  "wlr/taskbar": {
+    "format": "{icon}", // minimal, clean; use "{icon} {title}" if you want names
+    "icon-size": 22, // slightly smaller for neat spacing
+    "icon-theme": "Papirus-Dark", // consistent icons
+    "tooltip-format": "{title}", // shows app title on hover
+    "on-click": "activate", // left click focuses
+    "on-click-middle": "close", // middle click closes app
+    "all-outputs": false, // show only on focused output
+    "active-first": true, // active windows first
+    "spacing": 4 // spacing between buttons
+  },
+  "clock": {
+    "format": "  {:%I:%M %p}",
+    "format-alt": "{:%a, %b %d, %Y}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    }
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "⚡  {capacity}%",
+    "format-plugged": "  {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "tooltip": false
+  },
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": "  {ipaddr}",
+    "format-disconnected": "⚠ Disconnected",
+    "tooltip-format": "{ifname} via {gwaddr}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "{ifname}",
+    "tooltip-format-disconnected": "Disconnected"
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "  {volume}%",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        "",
+      ]
+    },
+    "tooltip": false,
+    "on-click": "pavucontrol"
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 8
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon}  {percent}%",
+    "format-icons": [
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ],
+    "on-scroll-up": "brightnessctl set 1%+",
+    "on-scroll-down": "brightnessctl set 1%-",
+    "tooltip": false
+  },
+  "custom/notification": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "swaync-client -t",
+    "on-click-right": "swaync-client -d",
+    "exec": "swaync-client -swb",
+    "return-type": "json"
+  },
+  "custom/media": {
+    "format": "{text}",
+    "return-type": "json",
+    "escape": true,
+    "exec": "python3 ~/.config/waybar/mediaplayer.py",
+    "interval": 2,
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+  }
+}

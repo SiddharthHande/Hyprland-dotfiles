@@ -1,0 +1,146 @@
+* {
+    font-family: "Ubuntu Nerd font", "Symbols Nerd Font", monospace;
+}
+
+/* Waybar window */
+window#waybar {
+    background: rgba(12, 12, 12, 0.97);
+    border: none;
+}
+
+/* Start button */
+#custom-start {
+    color: white;
+    padding: 6px 14px;
+    border-radius: 1px;
+    font-size: 20px;
+}
+
+#custom-start:hover {
+    background: rgba(105, 110, 115, 0.85);
+    color: white;
+    transition: background 0.15s ease;
+}
+
+/* Taskbar buttons */
+/* Taskbar buttons */
+#wlr-taskbar button {
+    border: none;
+    padding: 4px 8px;
+    margin: 0 2px;
+    border-radius: 2px;
+    background: transparent;
+    color: #e0e0e0;
+    transition: all 0.15s ease;
+    font-family: "Cascadia Code Nerd Font", monospace;
+}
+
+#wlr-taskbar button.active {
+    background: rgba(255, 255, 255, 0.08);
+    border-bottom: 3px solid rgba(160, 160, 160, 0.9);
+}
+
+#wlr-taskbar button:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* System tray modules */
+#tray,
+#pulseaudio,
+#network,
+#backlight,
+#battery,
+#clock,
+#custom-notification,
+#custom-power,
+#custom-media {
+    padding: 4px 12px;
+    color: #e0e0e0;
+    font-size: 15px;
+}
+
+#tray {
+    margin: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#clock {
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+#custom-power {
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+#custom-notification {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+/* Hover effects */
+#pulseaudio:hover,
+#network:hover,
+#custom-power:hover,
+#custom-notification:hover,
+#custom-clock:hover,
+#custom-media:hover,
+#battery:hover,
+#backlight:hover {
+    color: #0078d7;
+    transition: color 0.2s ease;
+}
+
+/* Battery states */
+#battery.warning {
+    color: #f9a825;
+}
+
+#battery.critical {
+    color: #e53935;
+}
+
+#battery.charging {
+    color: #66bb6a;
+}
+
+/* Media player styling */
+#custom-media {
+    padding: 4px 12px;
+    color: #1db954;
+    font-weight: 500;
+}
+
+#custom-media.spotify {
+    color: #1db954;
+}
+
+#custom-media.stopped {
+    color: #666;
+}
+
+#custom-notification {
+    color: #9ca3af;
+    /* grey default */
+}
+
+#custom-notification.active {
+    color: #4fc3f7;
+    /* light blue when active */
+}
+
+#custom-notification.dnd {
+    color: #777;
+    /* muted color */
+}
+
+#custom-media.spotify {
+    color: #1db954;
+}
+
+#custom-media.youtube {
+    color: #ff0000;
+}

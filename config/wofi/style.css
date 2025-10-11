@@ -1,0 +1,84 @@
+/* Main window */
+window {
+    margin: 0px;
+    border: 1px solid rgba(0, 120, 215, 0.3);
+    background-color: rgba(32, 32, 32, 0.95);
+    border-radius: 0px;
+    font-family: "CaskaydiaCove Nerd Font", sans-serif;
+}
+
+/* Input box */
+#input {
+    margin: 8px;
+    padding: 10px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(45, 45, 45, 0.9);
+    color: #ffffff;
+    border-radius: 2px;
+    font-size: 14px;
+}
+
+#input:focus {
+    border: 1px solid rgba(0, 120, 215, 0.8);
+    outline: none;
+}
+
+/* Inner box containing entries */
+#inner-box {
+    margin: 5px;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+}
+
+/* Scrollbar */
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+/* Entry items */
+#entry {
+    padding: 8px 12px;
+    margin: 2px 8px;
+    border: none;
+    background-color: transparent;
+    color: #e0e0e0;
+    border-radius: 2px;
+}
+
+#entry:selected {
+    background-color: rgba(0, 120, 215, 0.85);
+    color: #ffffff;
+    border-radius: 2px;
+}
+
+#entry:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Entry text */
+#text {
+    margin: 0px;
+    padding: 0px;
+    color: inherit;
+}
+
+#entry:selected #text {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* Entry icons */
+#img {
+    margin-right: 8px;
+    padding: 0px;
+}
+
+/* Outer box */
+#outer-box {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+}
