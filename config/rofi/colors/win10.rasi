@@ -1,0 +1,115 @@
+/* ============================================
+   OPTION 1: Classic Windows 10 Dark Grey
+   (Authentic Windows 10 colors)
+   ============================================ */
+/* 
+* {
+    background: #1E1E1EFF;
+    background-alt: #2D2D30FF;
+    foreground: #FFFFFFEF;
+    selected: #0078D4FF;
+    active: #1A86D9FF;
+    urgent: #E74856FF;
+} */
+
+
+/* ============================================
+   OPTION 2: Soft Charcoal Grey
+   (Warmer, softer grey tones)
+   ============================================ */
+
+
+* {
+    background: #2B2B2BFF;
+    background-alt: #3A3A3AFF;
+    foreground: #E8E8E8FF;
+    selected: #5B9BD5FF;
+    active: #70AADDFF;
+    urgent: #D14848FF;
+}
+
+
+
+/* ============================================
+   OPTION 3: Slate Grey Professional
+   (Cool, professional blue-grey)
+   ============================================ */
+
+/*
+* {
+    background:     #2C2F33FF;
+    background-alt: #3E4347FF;
+    foreground:     #DCDDDDFF;
+    selected:       #4A90D9FF;
+    active:         #5B9FE3FF;
+    urgent:         #CC6666FF;
+}
+*/
+
+
+/* ============================================
+   OPTION 4: Light Grey Mode
+   (Windows 10 Light Theme inspired)
+   ============================================ */
+
+/*
+* {
+    background:     #F3F3F3FF;
+    background-alt: #E5E5E5FF;
+    foreground:     #1F1F1FFF;
+    selected:       #0078D4FF;
+    active:         #106EBEFF;
+    urgent:         #C42B1CFF;
+}
+*/
+
+
+/* ============================================
+   OPTION 5: Steel Grey
+   (Modern, neutral grey with subtle blue)
+   ============================================ */
+
+/*
+* {
+    background:     #252526FF;
+    background-alt: #323233FF;
+    foreground:     #CCCCCCFF;
+    selected:       #007ACCFF;
+    active:         #1E88E5FF;
+    urgent:         #F48771FF;
+}
+*/
+
+
+/* ============================================
+   OPTION 6: Graphite Dark
+   (Deep charcoal with modern accents)
+   ============================================ */
+
+/*
+* {
+    background:     #1A1A1AFF;
+    background-alt: #272727FF;
+    foreground:     #D4D4D4FF;
+    selected:       #3794FFFF;
+    active:         #4FA5FFFF;
+    urgent:         #FF6B6BFF;
+}
+*/
+
+
+/* ============================================
+   OPTION 7: Ash Grey
+   (Neutral grey with warm undertones)
+   ============================================ */
+
+/*
+* {
+    background:     #2E2E2EFF;
+    background-alt: #3C3C3CFF;
+    foreground:     #E0E0E0FF;
+    selected:       #5294E2FF;
+    active:         #68A8EAFF;
+    urgent:         #E55353FF;
+}
+*/
