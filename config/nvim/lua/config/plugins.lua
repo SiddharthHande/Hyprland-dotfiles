@@ -122,7 +122,6 @@ require("lazy").setup({
   -- Misc tools
   { "numToStr/Comment.nvim", config = function() require("Comment").setup() end },
   { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup() end },
-  { 'numToStr/Comment.nvim', opts = {} },
   {
     "akinsho/toggleterm.nvim",
     version = "*", -- always keep it updated

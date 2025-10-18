@@ -6,9 +6,10 @@
     "custom/start",
     "wlr/taskbar"
   ],
-  "modules-center": [],
-  "modules-right": [
+  "modules-center": [
     "custom/media",
+  ],
+  "modules-right": [
     "tray",
     "pulseaudio",
     "backlight",
@@ -18,23 +19,23 @@
     "custom/notification"
   ],
   "custom/start": {
-    "format": "",
+    // "format": "",
+    "format": "",
     "tooltip": false,
-    "on-click": "wofi --show drun"
+    "on-click": "~/.config/rofi/launchers/type-3/launcher.sh"
   },
   "wlr/taskbar": {
-    "format": "{icon}", // minimal, clean; use "{icon} {title}" if you want names
-    "icon-size": 22, // slightly smaller for neat spacing
-    "icon-theme": "Papirus-Dark", // consistent icons
-    "tooltip-format": "{title}", // shows app title on hover
-    "on-click": "activate", // left click focuses
-    "on-click-middle": "close", // middle click closes app
-    "all-outputs": false, // show only on focused output
-    "active-first": true, // active windows first
-    "spacing": 4 // spacing between buttons
+    "format": "{icon}",
+    "icon-size": 20,
+    "icon-theme": "Papirus-Dark",
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "all-outputs": false,
+    "active-first": true
   },
   "clock": {
-    "format": "  {:%I:%M %p}",
+    "format": " {:%I:%M %p}",
     "format-alt": "{:%a, %b %d, %Y}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
@@ -57,8 +58,8 @@
       "critical": 15
     },
     "format": "{icon} {capacity}%",
-    "format-charging": "⚡  {capacity}%",
-    "format-plugged": "  {capacity}%",
+    "format-charging": "⚡ {capacity}%",
+    "format-plugged": " {capacity}%",
     "format-icons": [
       "",
       "",
@@ -69,8 +70,8 @@
     "tooltip": false
   },
   "network": {
-    "format-wifi": "  {essid}",
-    "format-ethernet": "  {ipaddr}",
+    "format-wifi": " {essid}",
+    "format-ethernet": " {ipaddr}",
     "format-disconnected": "⚠ Disconnected",
     "tooltip-format": "{ifname} via {gwaddr}",
     "tooltip-format-wifi": "{essid} ({signalStrength}%)",
@@ -78,8 +79,8 @@
     "tooltip-format-disconnected": "Disconnected"
   },
   "pulseaudio": {
-    "format": "{icon}  {volume}%",
-    "format-muted": "  {volume}%",
+    "format": "{icon} {volume}%",
+    "format-muted": " {volume}%",
     "format-icons": {
       "default": [
         "",
@@ -94,9 +95,14 @@
     "icon-size": 18,
     "spacing": 8
   },
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": false,
+    "on-click": "~/.config/hypr/powermenu.sh"
+  },
   "backlight": {
     "device": "intel_backlight",
-    "format": "{icon}  {percent}%",
+    "format": "{icon} {percent}%",
     "format-icons": [
       "󰃞",
       "󰃟",
