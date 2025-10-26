@@ -171,7 +171,7 @@ element-text {
     cursor:                         inherit;
     vertical-align:                 0.5;
     horizontal-align:               0.5;
-    font:                           "JetBrains Mono 9";
+    font:                           "Comic Code 10";
 }
 
 element normal.normal,

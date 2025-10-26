@@ -7,7 +7,7 @@
     "wlr/taskbar"
   ],
   "modules-center": [
-    "custom/media",
+    "custom/media"
   ],
   "modules-right": [
     "tray",
@@ -27,7 +27,7 @@
   "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 20,
-    "icon-theme": "Papirus-Dark",
+    // "icon-theme": "Papirus-Dark",
     "tooltip-format": "{title}",
     "on-click": "activate",
     "on-click-middle": "close",
