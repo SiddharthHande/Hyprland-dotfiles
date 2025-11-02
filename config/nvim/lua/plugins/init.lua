@@ -1,30 +1,88 @@
 return {
-  {
-    "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
-    opts = require "configs.conform",
-  },
+  { lazy = true, "nvim-lua/plenary.nvim" },
 
-  -- These are some examples, uncomment them if you want to see them work!
-  {
-    "neovim/nvim-lspconfig",
-    config = function()
-      require "configs.lspconfig"
-    end,
-  },
+  { "nvim-tree/nvim-web-devicons", opts = {} },
+  { "echasnovski/mini.statusline", opts = {} },
+  { "lewis6991/gitsigns.nvim", opts = {} },
 
-  -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
+  "EdenEast/nightfox.nvim",
+
+  {
+    "nvim-tree/nvim-tree.lua",
+    cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+    opts = {},
+  },
 
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
-        "vim", "lua", "vimdoc",
-        "html", "css",
-        "go", "gomod", "gowork", "gosum"
+    build = ":TSUpdate",
+    config = function()
+      require "plugins.configs.treesitter"
+    end,
+  },
+
+  {
+    "akinsho/bufferline.nvim",
+    opts = require "plugins.configs.bufferline",
+  },
+
+  -- we use blink plugin only when in insert mode
+  -- so lets lazyload it at InsertEnter event
+  {
+    "saghen/blink.cmp",
+    version = "1.*",
+    event = "InsertEnter",
+    dependencies = {
+      "rafamadriz/friendly-snippets",
+
+      -- snippets engine
+      {
+        "L3MON4D3/LuaSnip",
+        config = function()
+          require("luasnip.loaders.from_vscode").lazy_load()
+        end,
       },
+
+      -- autopairs , autocompletes ()[] etc
+      { "windwp/nvim-autopairs", opts = {} },
     },
+    -- made opts a function cuz cmp config calls cmp module
+    -- and we lazyloaded cmp so we dont want that file to be read on startup!
+    opts = function()
+      return require "plugins.configs.blink"
+    end,
+  },
+
+  {
+    "williamboman/mason.nvim",
+    build = ":MasonUpdate",
+    cmd = { "Mason", "MasonInstall" },
+    opts = {},
+  },
+
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require "plugins.configs.lspconfig"
+    end,
+  },
+
+  {
+    "stevearc/conform.nvim",
+    opts = require "plugins.configs.conform",
+  },
+
+  {
+    "nvimdev/indentmini.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    opts = {},
+  },
+
+  -- files finder etc
+  {
+    "nvim-telescope/telescope.nvim",
+    cmd = "Telescope",
+    opts = require "plugins.configs.telescope",
   },
 
   {
@@ -41,4 +99,17 @@ return {
     ft = {"go", 'gomod'},
     build = ':lua require("go.install").update_all_sync()'
   },
+  -- Using Lazy
+  {
+    "navarasu/onedark.nvim",
+    priority = 1000, -- make sure to load this before all the other start plugins
+    config = function()
+      require('onedark').setup {
+        style = 'warmer'
+      }
+      -- Enable theme
+      require('onedark').load()
+    end
+  }
+
 }
