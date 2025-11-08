@@ -26,7 +26,35 @@ map("n", "<C-q>", "<cmd> bd <CR>")
 map("n", "<leader>/", "gcc", { remap = true })
 map("v", "<leader>/", "gc", { remap = true })
 
+-- LSP specific
+map("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover" })
+
 -- format
 map("n", "<leader>fm", function()
   require("conform").format()
 end)
+
+map("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+
+-- 🧠 Apply the first available code action automatically
+map("n", "<leader>cq", function()
+  vim.lsp.buf.code_action { apply = true }
+end, opts)
+
+-- 🪄 Organize imports (if LSP supports it)
+map("n", "<leader>oi", function()
+  vim.lsp.buf.code_action { context = { only = { "source.organizeImports" } }, apply = true }
+end, opts)
+
+-- 🧹 Format + organize imports like VSCode
+map("n", "<leader>cf", function()
+  vim.lsp.buf.format()
+  vim.lsp.buf.code_action { context = { only = { "source.organizeImports" } }, apply = true }
+end, opts)
+
+map("n", "<Esc>", "<cmd>nohlsearch<CR>", { silent = true })
+
+-- ToggleTerm keymap
+map("n", "<leader>tt", "<cmd>ToggleTerm direction=float<CR>", { desc = "Toggle floating terminal" })
+map("n", "<leader>th", "<cmd>ToggleTerm direction=horizontal<CR>", { desc = "Toggle horizontal terminal" })
+map("t", "<Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })

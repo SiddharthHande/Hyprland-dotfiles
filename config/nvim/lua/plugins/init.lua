@@ -95,21 +95,25 @@ return {
     config = function()
       require("go").setup()
     end,
-    event = {"CmdlineEnter"},
-    ft = {"go", 'gomod'},
-    build = ':lua require("go.install").update_all_sync()'
+    event = { "CmdlineEnter" },
+    ft = { "go", "gomod" },
+    build = ':lua require("go.install").update_all_sync()',
   },
   -- Using Lazy
   {
     "navarasu/onedark.nvim",
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
-      require('onedark').setup {
-        style = 'warmer'
+      require("onedark").setup {
+        style = "warmer",
       }
       -- Enable theme
-      require('onedark').load()
-    end
-  }
-
+      require("onedark").load()
+    end,
+  },
+  {
+    "akinsho/toggleterm.nvim",
+    version = "*",
+    opts = require "plugins.configs.toggleterm",
+  },
 }
